@@ -1,0 +1,25 @@
+{
+  "name": "jpush-react-native-helper",
+  "version": "1.0.0",
+  "description": "彻底解决android端, 点击通知栏不跳转至指定页面问题",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikiLee2016/jpush-react-native-helper.git"
+  },
+  "keywords": [
+    "react-native",
+    "rn",
+    "jpush",
+    "android"
+  ],
+  "author": "Niki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikiLee2016/jpush-react-native-helper/issues"
+  },
+  "homepage": "https://github.com/NikiLee2016/jpush-react-native-helper#readme"
+}
