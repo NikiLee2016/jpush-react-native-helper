@@ -10,16 +10,15 @@
 - yarn add jpush-react-native-helper
 - react-native link jpush-react-native-helper
 - 打开android/app/src/main/java/你的包名/MainActivity.java, 添加如下代码
-	
 
-    @Override
+```
+@Override
     public void onNewIntent(Intent intent) {
-    
         super.onNewIntent(intent);
         //如果该方法已被重写, 那么添加 setIntent(intent); 这行就可以
         setIntent(intent);
-        
     }
+```
 
 ## Usage
 在rn端页面栈的第一个页面, 通过getExtras方法获取消息体数据, 解析它, 即可知道该如何跳转
