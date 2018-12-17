@@ -34,7 +34,7 @@ public class IntentModule extends ReactContextBaseJavaModule {
                     }
                     promise.resolve(writableMap);
                 }else {
-                    promise.reject("1", "extras is null");
+                    //promise.reject("1", "extras is null");
                 }
             }else {
                 promise.reject("1", "intent is null");

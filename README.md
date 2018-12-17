@@ -23,10 +23,15 @@
 ## Usage
 在rn端页面栈的第一个页面, 通过getExtras方法获取消息体数据, 解析它, 即可知道该如何跳转
 
+```
+import {JPushHelper} from "jpush-react-native-helper";
     setTimeout(() => {
             IntentUtil.getExtras()
                 .then((data) => {
                     console.log(JSON.stringify(data));
                 });
         }, 100);
+
+```
+    
 注意由于android端的限制, getExtras方法需要延时调用, 不然在某些机型上, 得到的消息体会一直为空
