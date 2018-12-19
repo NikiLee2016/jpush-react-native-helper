@@ -1,7 +1,7 @@
 # jpush-react-native-helper
 彻底解决android端, 点击通知栏不跳转至指定页面问题
 
-**核心思路: 我翻看jpush-react-native源码时发现, 在用户点击通知栏消息的回调(见下图), 消息体bundle被放进了intent的extras中, 所以我认为在rn端首页, 可以通过桥接, 拿到当前activity的intent, 即可获取消息体bundle, 解析bundle, 就可以实现指定页面跳转了**
+**核心思路: 我翻看极光推送库jpush-react-native源码时发现, 在用户点击通知栏消息的回调(见下图), 消息体bundle被放进了intent的extras中, 所以我认为在rn端首页, 可以通过桥接, 拿到当前activity的intent, 即可获取消息体bundle, 解析bundle, 就可以实现指定页面跳转了**
 ![Alt text|center](./screenshoot/3381545032639_.pic.jpg)
 
 
