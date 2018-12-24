@@ -29,6 +29,9 @@ public class IntentModule extends ReactContextBaseJavaModule {
                 if (extras != null){
                     WritableMap writableMap = Arguments.createMap();
                     JSONObject jsonObject = ParseUtil.formatBundle(extras);
+                    if (jsonObject == null){
+                        return;
+                    }
                     for (String key : jsonObject.keySet()) {
                         writableMap.putString(key, extras.get(key) + "");
                     }
