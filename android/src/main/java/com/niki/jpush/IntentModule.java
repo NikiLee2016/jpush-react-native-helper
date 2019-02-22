@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.alibaba.fastjson.JSONObject;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -20,21 +19,14 @@ public class IntentModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getExtras(Promise promise){
-        Log.i("com.douxiAppClub.log", "getExtras");
+        Log.i("IntentModule.log", "getExtras");
         Activity activity = getCurrentActivity();
         if (activity != null){
             Intent intent = activity.getIntent();
             if (intent != null){
                 Bundle extras = intent.getExtras();
                 if (extras != null){
-                    WritableMap writableMap = Arguments.createMap();
-                    JSONObject jsonObject = ParseUtil.formatBundle(extras);
-                    if (jsonObject == null){
-                        return;
-                    }
-                    for (String key : jsonObject.keySet()) {
-                        writableMap.putString(key, extras.get(key) + "");
-                    }
+                    WritableMap writableMap = Arguments.fromBundle(extras);
                     promise.resolve(writableMap);
                 }else {
                     //promise.reject("1", "extras is null");
